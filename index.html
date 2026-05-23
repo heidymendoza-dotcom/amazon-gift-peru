@@ -1,120 +1,525 @@
-header {
-  background-color: #8B4513;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMAZON GIFT</title>
 
-h1 {
-  margin: 0;
-  font-size: 24px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+  <style>
 
-nav ul li {
-  margin-left: 20px;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
+    body{
+      background:#f5f1e8;
+      color:#222;
+      overflow-x:hidden;
+    }
 
-main {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    /* NAVBAR */
 
-section {
-  margin-bottom: 40px;
-}
+    nav{
+      width:100%;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 70px;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
 
-h2 {
-  color: #8B4513;
-}
+    nav h1{
+      color:#1b5e20;
+      font-size:32px;
+      letter-spacing:2px;
+    }
 
-.product {
-  display: flex;
-  margin-bottom: 20px;
-}
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:35px;
+    }
 
-.product img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin-right: 20px;
-}
+    nav ul li{
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:500;
+    }
 
-.product-details h3 {
-  margin-top: 0;
-}
+    nav ul li:hover{
+      color:#2e7d32;
+    }
 
-.price {
-  font-weight: bold;
-  color: #8B4513;
-}
+    .language{
+      background:#2e7d32;
+      color:white;
+      border:none;
+      padding:10px 15px;
+      border-radius:10px;
+      cursor:pointer;
+    }
 
-.btn {
-  display: inline-block;
-  background-color: #8B4513;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
+    /* HERO */
 
-.btn:hover {
-  background-color: #6B3E1A;
-}
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1974&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 100px;
+      color:white;
+    }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-<section id="productos">
-  <h2>Nuestros Productos</h2>
-  <div class="product">
-    <img src="https://i.imgur.com/product1.jpg" alt="Vestido tradicional Shipibo-Konibo">
-    <div class="product-details">
-      <h3>Vestido tradicional Shipibo-Konibo</h3>
-      <p class="price">S/ 180</p>
-      <p>Elaborado a mano con tejidos tradicionales amazónicos. Diseños inspirados en símbolos ancestrales de la comunidad Shipibo.</p>
-      <a href="#" class="btn">Ver Detalles</a>
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h2{
+      font-size:70px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+
+    .hero button{
+      padding:18px 35px;
+      border:none;
+      background:#43a047;
+      color:white;
+      font-size:18px;
+      border-radius:12px;
+      cursor:pointer;
+      transition:0.4s;
+    }
+
+    .hero button:hover{
+      background:#1b5e20;
+      transform:scale(1.05);
+    }
+
+    /* HISTORIA */
+
+    .story{
+      padding:100px 80px;
+      background:white;
+    }
+
+    .story-container{
+      display:flex;
+      gap:60px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .story img{
+      width:500px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .story-text{
+      flex:1;
+    }
+
+    .story-text h3{
+      font-size:45px;
+      margin-bottom:20px;
+      color:#1b5e20;
+    }
+
+    .story-text p{
+      font-size:18px;
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    /* PRODUCTOS */
+
+    .products{
+      padding:100px 70px;
+      background:#edf5ed;
+    }
+
+    .products h2{
+      text-align:center;
+      font-size:50px;
+      margin-bottom:60px;
+      color:#1b5e20;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:35px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card-content h3{
+      margin-bottom:15px;
+      color:#1b5e20;
+    }
+
+    .price{
+      color:#e65100;
+      font-size:24px;
+      font-weight:bold;
+      margin:15px 0;
+    }
+
+    .card-content button{
+      background:#2e7d32;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:10px;
+      cursor:pointer;
+      margin-top:15px;
+    }
+
+    /* COMENTARIOS */
+
+    .comments{
+      padding:100px 80px;
+      background:white;
+    }
+
+    .comments h2{
+      text-align:center;
+      font-size:50px;
+      margin-bottom:40px;
+      color:#1b5e20;
+    }
+
+    form{
+      max-width:700px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    input, textarea{
+      padding:18px;
+      border-radius:12px;
+      border:1px solid #ccc;
+      font-size:16px;
+    }
+
+    textarea{
+      height:180px;
+      resize:none;
+    }
+
+    form button{
+      padding:18px;
+      border:none;
+      background:#2e7d32;
+      color:white;
+      font-size:18px;
+      border-radius:12px;
+      cursor:pointer;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:40px;
+    }
+
+    footer p{
+      margin-top:10px;
+      opacity:0.8;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      nav{
+        padding:20px;
+      }
+
+      nav ul{
+        display:none;
+      }
+
+      .hero{
+        padding:0 30px;
+      }
+
+      .hero h2{
+        font-size:45px;
+      }
+
+      .story{
+        padding:70px 30px;
+      }
+
+      .products{
+        padding:70px 30px;
+      }
+
+      .comments{
+        padding:70px 30px;
+      }
+
+      .story img{
+        width:100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <h1>AMAZON GIFT</h1>
+
+    <ul>
+      <li>Inicio</li>
+      <li>Artesanías</li>
+      <li>Historias</li>
+      <li>Comunidad</li>
+      <li>Contacto</li>
+    </ul>
+
+    <select class="language">
+      <option>Español</option>
+      <option>English</option>
+      <option>Français</option>
+    </select>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>Artesanía Amazónica con Historia</h2>
+
+      <p>
+        Descubre productos únicos hechos por artesanas de la Amazonía peruana.
+        Cada pieza representa cultura, tradición y el esfuerzo de familias
+        que preservan su identidad a través del arte.
+      </p>
+
+      <button>Explorar Colección</button>
+
     </div>
-  </div>
-  <!-- Agrega más productos aquí -->
-</section>
 
-<section id="historia">
-  <h2>Historia de la Artesana</h2>
-  <div class="artisan-story">
-    <img src="https://i.imgur.com/artisan1.jpg" alt="Rosa Shinan">
-    <h3>Rosa Shinan - Artesana Shipibo-Konibo</h3>
-    <p>Rosa vive cerca del río Ucayali junto a sus tres hijos. Desde pequeña aprendió el arte del tejido gracias a su madre y su abuela, quienes le enseñaron los símbolos tradicionales de su comunidad.</p>
-    <p>Cada prenda que crea representa elementos de la naturaleza amazónica, como los ríos, animales y plantas medicinales de la selva peruana. Gracias a su trabajo artesanal, Rosa puede apoyar económicamente a su familia y mantener vivas las tradiciones culturales de su comunidad.</p>
-  </div>
-</section>
+  </section>
 
-<section id="contacto">
-  <h2>Contáctanos</h2>
-  <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos:</p>
-  <ul>
-    <li><i class="fas fa-envelope"></i> info@amazongift.com</li>
-    <li><i class="fas fa-phone"></i> +51 123 456 789</li>
-    <li><i class="fas fa-map-marker-alt"></i> Av. Los Artesanos 123, Iquitos, Perú</li>
-  </ul>
-</section>
+  <!-- HISTORIA -->
+
+  <section class="story">
+
+    <div class="story-container">
+
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop">
+
+      <div class="story-text">
+
+        <h3>La historia de Rosa Shinan</h3>
+
+        <p>
+          Rosa vive en una comunidad cercana al río Ucayali. Desde niña aprendió
+          el arte del tejido gracias a su madre y su abuela.
+        </p>
+
+        <p>
+          Cada prenda que confecciona representa símbolos ancestrales de la selva
+          amazónica y transmite la historia de su comunidad Shipibo-Konibo.
+        </p>
+
+        <p>
+          Gracias a la venta de sus artesanías, Rosa puede apoyar la educación
+          de sus hijos y mejorar la calidad de vida de su familia.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTOS -->
+
+  <section class="products">
+
+    <h2>Nuestras Artesanías</h2>
+
+    <div class="product-grid">
+
+      <!-- PRODUCTO 1 -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1974&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Vestido Amazónico Shipibo</h3>
+
+          <p>
+            Tejido tradicional hecho completamente a mano.
+          </p>
+
+          <div class="price">S/ 180</div>
+
+          <button>Ver Historia</button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 2 -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1970&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Bolso Artesanal</h3>
+
+          <p>
+            Elaborado con fibras naturales amazónicas.
+          </p>
+
+          <div class="price">S/ 95</div>
+
+          <button>Ver Historia</button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 3 -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Collar de Semillas</h3>
+
+          <p>
+            Accesorio ecológico inspirado en la naturaleza.
+          </p>
+
+          <div class="price">S/ 45</div>
+
+          <button>Ver Historia</button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 4 -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1980&auto=format&fit=crop">
+
+        <div class="card-content">
+
+          <h3>Pulsera Tejida</h3>
+
+          <p>
+            Diseños coloridos hechos por artesanas amazónicas.
+          </p>
+
+          <div class="price">S/ 30</div>
+
+          <button>Ver Historia</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COMENTARIOS -->
+
+  <section class="comments">
+
+    <h2>Déjanos tus comentarios</h2>
+
+    <form>
+
+      <input type="text" placeholder="Tu nombre">
+
+      <input type="email" placeholder="Tu correo">
+
+      <textarea placeholder="Escribe tu experiencia aquí..."></textarea>
+
+      <button>Enviar comentario</button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>AMAZON GIFT</h2>
+
+    <p>
+      Revalorizando la cultura amazónica a través de la tecnología y el arte.
+    </p>
+
+  </footer>
+
+</body>
+</html>
