@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>AMAZON GIFT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -18,9 +19,9 @@
     }
 
     body{
-      background:#f5f1e8;
-      color:#222;
+      background:#f5f2ea;
       overflow-x:hidden;
+      color:#222;
     }
 
     /* NAVBAR */
@@ -28,10 +29,10 @@
     nav{
       width:100%;
       background:white;
+      padding:20px 70px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 70px;
       position:fixed;
       top:0;
       z-index:1000;
@@ -39,21 +40,22 @@
     }
 
     nav h1{
+      font-size:42px;
       color:#1b5e20;
-      font-size:32px;
+      font-weight:700;
       letter-spacing:2px;
     }
 
     nav ul{
       display:flex;
+      gap:40px;
       list-style:none;
-      gap:35px;
     }
 
     nav ul li{
       cursor:pointer;
-      transition:0.3s;
       font-weight:500;
+      transition:0.3s;
     }
 
     nav ul li:hover{
@@ -64,23 +66,29 @@
       background:#2e7d32;
       color:white;
       border:none;
-      padding:10px 15px;
+      padding:12px 20px;
       border-radius:10px;
       cursor:pointer;
+      font-size:16px;
     }
 
     /* HERO */
 
     .hero{
+      width:100%;
       height:100vh;
+
       background:
       linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-      url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1974&auto=format&fit=crop');
+      url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1974&auto=format&fit=crop');
+
       background-size:cover;
       background-position:center;
+
       display:flex;
       align-items:center;
-      padding:0 100px;
+      padding:0 90px;
+
       color:white;
     }
 
@@ -89,14 +97,15 @@
     }
 
     .hero h2{
-      font-size:70px;
-      margin-bottom:20px;
+      font-size:75px;
+      line-height:1.1;
+      margin-bottom:25px;
     }
 
     .hero p{
       font-size:22px;
       line-height:1.8;
-      margin-bottom:30px;
+      margin-bottom:35px;
     }
 
     .hero button{
@@ -104,8 +113,8 @@
       border:none;
       background:#43a047;
       color:white;
-      font-size:18px;
       border-radius:12px;
+      font-size:18px;
       cursor:pointer;
       transition:0.4s;
     }
@@ -118,21 +127,21 @@
     /* HISTORIA */
 
     .story{
-      padding:100px 80px;
+      padding:120px 80px;
       background:white;
     }
 
     .story-container{
       display:flex;
-      gap:60px;
       align-items:center;
+      gap:60px;
       flex-wrap:wrap;
     }
 
     .story img{
       width:500px;
-      border-radius:20px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.2);
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
     }
 
     .story-text{
@@ -140,27 +149,27 @@
     }
 
     .story-text h3{
-      font-size:45px;
-      margin-bottom:20px;
+      font-size:55px;
       color:#1b5e20;
+      margin-bottom:25px;
     }
 
     .story-text p{
-      font-size:18px;
-      line-height:1.9;
+      font-size:20px;
+      line-height:2;
       margin-bottom:20px;
     }
 
     /* PRODUCTOS */
 
     .products{
-      padding:100px 70px;
+      padding:120px 80px;
       background:#edf5ed;
     }
 
     .products h2{
       text-align:center;
-      font-size:50px;
+      font-size:55px;
       margin-bottom:60px;
       color:#1b5e20;
     }
@@ -176,7 +185,7 @@
       border-radius:20px;
       overflow:hidden;
       transition:0.4s;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
     }
 
     .card:hover{
@@ -194,39 +203,49 @@
     }
 
     .card-content h3{
-      margin-bottom:15px;
       color:#1b5e20;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .card-content p{
+      line-height:1.8;
+      margin-bottom:15px;
     }
 
     .price{
-      color:#e65100;
-      font-size:24px;
+      color:#d84315;
+      font-size:28px;
       font-weight:bold;
-      margin:15px 0;
+      margin-bottom:20px;
     }
 
     .card-content button{
       background:#2e7d32;
       color:white;
       border:none;
-      padding:12px 20px;
+      padding:14px 22px;
       border-radius:10px;
       cursor:pointer;
-      margin-top:15px;
+      transition:0.3s;
+    }
+
+    .card-content button:hover{
+      background:#1b5e20;
     }
 
     /* COMENTARIOS */
 
     .comments{
-      padding:100px 80px;
+      padding:120px 80px;
       background:white;
     }
 
     .comments h2{
       text-align:center;
-      font-size:50px;
-      margin-bottom:40px;
+      font-size:55px;
       color:#1b5e20;
+      margin-bottom:50px;
     }
 
     form{
@@ -234,7 +253,7 @@
       margin:auto;
       display:flex;
       flex-direction:column;
-      gap:20px;
+      gap:25px;
     }
 
     input, textarea{
@@ -245,7 +264,7 @@
     }
 
     textarea{
-      height:180px;
+      height:200px;
       resize:none;
     }
 
@@ -254,9 +273,14 @@
       border:none;
       background:#2e7d32;
       color:white;
-      font-size:18px;
       border-radius:12px;
       cursor:pointer;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    form button:hover{
+      background:#1b5e20;
     }
 
     /* FOOTER */
@@ -265,12 +289,17 @@
       background:#1b5e20;
       color:white;
       text-align:center;
-      padding:40px;
+      padding:50px;
+    }
+
+    footer h2{
+      font-size:40px;
+      margin-bottom:10px;
     }
 
     footer p{
-      margin-top:10px;
       opacity:0.8;
+      font-size:18px;
     }
 
     /* RESPONSIVE */
@@ -294,15 +323,15 @@
       }
 
       .story{
-        padding:70px 30px;
+        padding:80px 30px;
       }
 
       .products{
-        padding:70px 30px;
+        padding:80px 30px;
       }
 
       .comments{
-        padding:70px 30px;
+        padding:80px 30px;
       }
 
       .story img{
@@ -312,6 +341,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -319,6 +349,7 @@
   <!-- NAVBAR -->
 
   <nav>
+
     <h1>AMAZON GIFT</h1>
 
     <ul>
@@ -334,6 +365,7 @@
       <option>English</option>
       <option>Français</option>
     </select>
+
   </nav>
 
   <!-- HERO -->
@@ -342,15 +374,17 @@
 
     <div class="hero-content">
 
-      <h2>Artesanía Amazónica con Historia</h2>
+      <h2>
+        Artesanías Amazónicas con Historia
+      </h2>
 
       <p>
-        Descubre productos únicos hechos por artesanas de la Amazonía peruana.
-        Cada pieza representa cultura, tradición y el esfuerzo de familias
-        que preservan su identidad a través del arte.
+        Descubre piezas únicas elaboradas por artesanas de la selva peruana.
+        Cada creación transmite cultura, tradición y el esfuerzo de familias
+        que preservan su identidad a través del arte ancestral amazónico.
       </p>
 
-      <button>Explorar Colección</button>
+      <button>Explorar colección</button>
 
     </div>
 
@@ -362,25 +396,26 @@
 
     <div class="story-container">
 
-      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=1974&auto=format&fit=crop">
 
       <div class="story-text">
 
         <h3>La historia de Rosa Shinan</h3>
 
         <p>
-          Rosa vive en una comunidad cercana al río Ucayali. Desde niña aprendió
-          el arte del tejido gracias a su madre y su abuela.
+          Rosa Shinan es una artesana Shipibo-Konibo que vive cerca del río Ucayali,
+          en la Amazonía peruana. Desde pequeña aprendió el arte ancestral de la
+          cerámica, los tejidos y la joyería artesanal gracias a su madre y su abuela.
         </p>
 
         <p>
-          Cada prenda que confecciona representa símbolos ancestrales de la selva
-          amazónica y transmite la historia de su comunidad Shipibo-Konibo.
+          Cada pieza que crea representa elementos espirituales y naturales de la
+          selva amazónica, como aves tropicales, ríos y plantas medicinales.
         </p>
 
         <p>
-          Gracias a la venta de sus artesanías, Rosa puede apoyar la educación
-          de sus hijos y mejorar la calidad de vida de su familia.
+          Gracias a la venta de sus artesanías, Rosa puede apoyar económicamente
+          a su familia y preservar las tradiciones culturales de su comunidad.
         </p>
 
       </div>
@@ -393,7 +428,7 @@
 
   <section class="products">
 
-    <h2>Nuestras Artesanías</h2>
+    <h2>Artesanías Amazónicas</h2>
 
     <div class="product-grid">
 
@@ -401,19 +436,19 @@
 
       <div class="card">
 
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1974&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1974&auto=format&fit=crop">
 
         <div class="card-content">
 
-          <h3>Vestido Amazónico Shipibo</h3>
+          <h3>Vasija Artesanal</h3>
 
           <p>
-            Tejido tradicional hecho completamente a mano.
+            Cerámica amazónica hecha a mano con símbolos ancestrales tradicionales.
           </p>
 
-          <div class="price">S/ 180</div>
+          <div class="price">S/ 120</div>
 
-          <button>Ver Historia</button>
+          <button>Conocer historia</button>
 
         </div>
 
@@ -423,19 +458,19 @@
 
       <div class="card">
 
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1970&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1974&auto=format&fit=crop">
 
         <div class="card-content">
 
-          <h3>Bolso Artesanal</h3>
+          <h3>Atrapasueños Artesanal</h3>
 
           <p>
-            Elaborado con fibras naturales amazónicas.
+            Elaborado con fibras naturales y decoraciones inspiradas en la selva.
           </p>
 
-          <div class="price">S/ 95</div>
+          <div class="price">S/ 75</div>
 
-          <button>Ver Historia</button>
+          <button>Conocer historia</button>
 
         </div>
 
@@ -449,15 +484,15 @@
 
         <div class="card-content">
 
-          <h3>Collar de Semillas</h3>
+          <h3>Joyería Amazónica</h3>
 
           <p>
-            Accesorio ecológico inspirado en la naturaleza.
+            Collar artesanal hecho con semillas naturales y materiales ecológicos.
           </p>
 
-          <div class="price">S/ 45</div>
+          <div class="price">S/ 55</div>
 
-          <button>Ver Historia</button>
+          <button>Conocer historia</button>
 
         </div>
 
@@ -467,19 +502,19 @@
 
       <div class="card">
 
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1980&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1974&auto=format&fit=crop">
 
         <div class="card-content">
 
-          <h3>Pulsera Tejida</h3>
+          <h3>Pulsera Artesanal</h3>
 
           <p>
-            Diseños coloridos hechos por artesanas amazónicas.
+            Tejida a mano por artesanas amazónicas utilizando fibras naturales.
           </p>
 
-          <div class="price">S/ 30</div>
+          <div class="price">S/ 35</div>
 
-          <button>Ver Historia</button>
+          <button>Conocer historia</button>
 
         </div>
 
@@ -499,9 +534,9 @@
 
       <input type="text" placeholder="Tu nombre">
 
-      <input type="email" placeholder="Tu correo">
+      <input type="email" placeholder="Tu correo electrónico">
 
-      <textarea placeholder="Escribe tu experiencia aquí..."></textarea>
+      <textarea placeholder="Escribe aquí tu experiencia con nuestras artesanías..."></textarea>
 
       <button>Enviar comentario</button>
 
@@ -516,7 +551,7 @@
     <h2>AMAZON GIFT</h2>
 
     <p>
-      Revalorizando la cultura amazónica a través de la tecnología y el arte.
+      Revalorizando la cultura amazónica a través del arte y la tecnología.
     </p>
 
   </footer>
