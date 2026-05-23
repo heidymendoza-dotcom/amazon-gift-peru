@@ -1,32 +1,21 @@
-body {
-  background: url("https://i.imgur.com/kGPSmvN.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: var(--off-white);
-  font-family: var(--sans-serif);
-  margin: 0;
-  padding: 0;
-}
-
 header {
-  background: rgba(0, 0, 0, 0.7);
+  background-color: #8B4513;
   padding: 20px;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
-.logo {
-  color: var(--off-white);
+h1 {
+  margin: 0;
   font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -35,83 +24,97 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--off-white);
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: var(--light-green);
 }
 
 main {
-  padding: 40px;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
-h1, h2 {
-  font-family: var(--serif);
+h2 {
+  color: #8B4513;
+}
+
+.product {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.product-details h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #8B4513;
 }
 
 .btn {
   display: inline-block;
-  background: var(--light-green);
-  color: var(--off-white);
+  background-color: #8B4513;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background: var(--dark-green);
+  background-color: #6B3E1A;
 }
 
-/* Estilos adicionales para las secciones y funcionalidades */
-/* ... */
-<section id="catalog">
-  <h2>Catálogo de Artesanías</h2>
-  <div class="product-grid">
-    <!-- Producto 1 -->
-    <div class="product">
-      <img src="https://i.imgur.com/product1.jpg" alt="Producto 1">
-      <h3>Cesta de Palma Chambira</h3>
-      <p class="price">S/ 80.00</p>
-      <p class="materials">Materiales: Palma Chambira</p>
-      <p class="cultural-meaning">Significado cultural: Representa la habilidad y dedicación de las mujeres artesanas Bora.</p>
-      <p class="region">Región: Loreto</p>
-      <p class="elaboration-time">Tiempo de elaboración: 1 semana</p>
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+<section id="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="product">
+    <img src="https://i.imgur.com/product1.jpg" alt="Vestido tradicional Shipibo-Konibo">
+    <div class="product-details">
+      <h3>Vestido tradicional Shipibo-Konibo</h3>
+      <p class="price">S/ 180</p>
+      <p>Elaborado a mano con tejidos tradicionales amazónicos. Diseños inspirados en símbolos ancestrales de la comunidad Shipibo.</p>
       <a href="#" class="btn">Ver Detalles</a>
     </div>
-    <!-- Producto 2 -->
-    <!-- ... -->
-    <!-- Producto 3 -->
-    <!-- ... -->
-    <!-- Producto 4 -->
-    <!-- ... -->
-    <!-- Producto 5 -->
-    <!-- ... -->
-    <!-- Producto 6 -->
-    <!-- ... -->
+  </div>
+  <!-- Agrega más productos aquí -->
+</section>
+
+<section id="historia">
+  <h2>Historia de la Artesana</h2>
+  <div class="artisan-story">
+    <img src="https://i.imgur.com/artisan1.jpg" alt="Rosa Shinan">
+    <h3>Rosa Shinan - Artesana Shipibo-Konibo</h3>
+    <p>Rosa vive cerca del río Ucayali junto a sus tres hijos. Desde pequeña aprendió el arte del tejido gracias a su madre y su abuela, quienes le enseñaron los símbolos tradicionales de su comunidad.</p>
+    <p>Cada prenda que crea representa elementos de la naturaleza amazónica, como los ríos, animales y plantas medicinales de la selva peruana. Gracias a su trabajo artesanal, Rosa puede apoyar económicamente a su familia y mantener vivas las tradiciones culturales de su comunidad.</p>
   </div>
 </section>
 
-<section id="artisans">
-  <h2>Nuestros Artesanos</h2>
-  <!-- Artesano 1 -->
-  <div class="artisan">
-    <img src="https://i.imgur.com/artisan1.jpg" alt="Artesano 1">
-    <h3>María Sánchez</h3>
-    <p class="personal-story">María lleva más de 20 años perfeccionando el arte de tejer cestas de palma Chambira. Aprendió de su madre y abuela, quienes le transmitieron este valioso conocimiento ancestral.</p>
-    <p class="cultural-tradition">Las cestas de palma Chambira son una tradición milenaria del pueblo Bora, y representan su estrecha conexión con la naturaleza y la selva amazónica.</p>
-    <a href="#" class="btn">Ver Proceso Artesanal</a>
-  </div>
-  <!-- Artesano 2 -->
-  <!-- ... -->
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos:</p>
+  <ul>
+    <li><i class="fas fa-envelope"></i> info@amazongift.com</li>
+    <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+    <li><i class="fas fa-map-marker-alt"></i> Av. Los Artesanos 123, Iquitos, Perú</li>
+  </ul>
 </section>
-
-<!-- Secciones adicionales -->
-<!-- ... -->
